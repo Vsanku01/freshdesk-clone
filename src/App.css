@@ -1,38 +1,60 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Raleway:wght@300;400;500;600&display=swap');
+
+body {
   text-align: center;
+  font-family: 'Poppins', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#home {
+  display: grid;
+  grid-template-columns: 0.2fr 1fr 1fr 1fr 0.3fr 1fr;
+  grid-template-rows: repeat(10, minmax(50px, auto));
+  max-width: 100%;
+  margin: 0 auto;
+  height: 100vh;
+  grid-gap: 5px;
+  grid-template-areas:
+    'nav header header header header header'
+    'nav main main main main aside'
+    'nav main main main main aside'
+    'nav main main main main aside'
+    'nav main main main main aside'
+    'nav main main main main aside'
+    'nav main main main main aside'
+    'nav main main main main aside'
+    'nav main main main main aside';
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#home > * {
+  background: #bbd3dd;
+  padding: 30px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
+header {
+  grid-area: header;
+}
+
+nav {
+  grid-area: nav;
+  /* display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-around;
+  align-items: center; */
+  display: grid;
 }
 
-.App-link {
-  color: #61dafb;
+main {
+  grid-area: main;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+aside {
+  grid-area: aside;
+}
+
+footer {
+  grid-area: footer;
+}
+
+section {
+  grid-area: section;
 }
