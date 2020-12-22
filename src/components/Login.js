@@ -11,7 +11,7 @@ const Login = ({ setIsLogged, setLoggedUser }) => {
       email: email,
       password: password,
     };
-    fetch('http://localhost:5000/login', {
+    fetch('https://freshdesk-backend.herokuapp.com/login', {
       method: 'POST',
       body: JSON.stringify(userData),
       headers: {
@@ -43,7 +43,7 @@ const Login = ({ setIsLogged, setLoggedUser }) => {
       email: email,
       password: password,
     };
-    await fetch('http://localhost:5000/change-password', {
+    await fetch('https://freshdesk-backend.herokuapp.com/change-password', {
       method: 'POST',
       body: JSON.stringify(userData),
       headers: {

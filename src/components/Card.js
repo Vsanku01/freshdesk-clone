@@ -17,7 +17,7 @@ const Card = ({ details, display }) => {
       <div className='flex space-x-4 bg-gray-300 p-5 rounded-md items-center m-2 card'>
         {/* Image */}
         <img
-          src={'http://localhost:5000/' + image}
+          src={'https://freshdesk-backend.herokuapp.com/' + image}
           alt='profileImage'
           className='rounded-full h-16 w-16'
         />

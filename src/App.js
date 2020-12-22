@@ -10,7 +10,7 @@ function App() {
 
   useEffect(() => {
     console.log('Calling from API');
-    fetch('http://localhost:5000/view-tickets')
+    fetch('https://freshdesk-backend.herokuapp.com/view-tickets')
       .then((res) => res.json())
       .then((result) => {
         let cardsLength = result.tickets.length;

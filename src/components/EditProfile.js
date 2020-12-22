@@ -13,7 +13,7 @@ const EditProfile = ({ loggedUser, setRefactorProfile, refactorProfile }) => {
 
   useEffect(() => {
     const profileData = { email: loggedUser };
-    fetch('http://localhost:5000/get-profile', {
+    fetch('https://freshdesk-backend.herokuapp.com/get-profile', {
       method: 'POST',
       body: JSON.stringify(profileData),
       headers: {
@@ -53,7 +53,7 @@ const EditProfile = ({ loggedUser, setRefactorProfile, refactorProfile }) => {
     formData.append('contact', contact);
     formData.append('profileImage', file);
 
-    Axios.post('http://localhost:5000/edit-profile', formData)
+    Axios.post('https://freshdesk-backend.herokuapp.com/edit-profile', formData)
       .then((res) => {
         if (res.data.flag) {
           alert('Profile Edited Successfully');
@@ -65,7 +65,7 @@ const EditProfile = ({ loggedUser, setRefactorProfile, refactorProfile }) => {
       .catch((err) => console.log(err));
 
     // // fetch
-    // await fetch('http://localhost:5000/edit-profile', {
+    // await fetch('https://freshdesk-backend.herokuapp.com/edit-profile', {
     //   method: 'POST',
     //   body: JSON.stringify(userData),
     //   headers: {

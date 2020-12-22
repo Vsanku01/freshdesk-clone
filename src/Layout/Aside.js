@@ -31,7 +31,7 @@ const Aside = (props) => {
     };
 
     console.log('Ticket Body', ticketBody);
-    await fetch('http://localhost:5000/add-ticket', {
+    await fetch('https://freshdesk-backend.herokuapp.com/add-ticket', {
       method: 'POST',
       body: JSON.stringify(ticketBody),
       headers: {
@@ -48,7 +48,7 @@ const Aside = (props) => {
 
   useEffect(() => {
     const loggedUserData = { email: props.loggedUser };
-    fetch('http://localhost:5000/get-profile', {
+    fetch('https://freshdesk-backend.herokuapp.com/get-profile', {
       method: 'POST',
       body: JSON.stringify(loggedUserData),
       headers: {

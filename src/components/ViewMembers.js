@@ -4,7 +4,7 @@ import MemberCard from './MemberCard';
 const ViewMembers = () => {
   const [employees, setEmployees] = useState([]);
   useEffect(() => {
-    fetch('http://localhost:5000/get-members')
+    fetch('https://freshdesk-backend.herokuapp.com/get-members')
       .then((res) => res.json())
       .then((result) => {
         console.log(result.members.length);

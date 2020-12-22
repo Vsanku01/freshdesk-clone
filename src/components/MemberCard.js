@@ -7,7 +7,7 @@ const MemberCard = ({ name, designation, sap, image, id }) => {
       <div className='flex space-x-4 bg-gray-300 p-5 rounded-md items-center m-2'>
         {/* Image */}
         <img
-          src={'http://localhost:5000/' + image}
+          src={'https://freshdesk-backend.herokuapp.com/' + image}
           alt=''
           className='rounded-full h-16 w-16'
         />

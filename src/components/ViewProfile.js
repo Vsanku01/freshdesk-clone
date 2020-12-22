@@ -13,7 +13,7 @@ const ViewProfile = ({ loggedUser, refactorProfile }) => {
   let email = loggedUser;
   useEffect(() => {
     const loggedUserData = { email: loggedUser };
-    fetch('http://localhost:5000/get-profile', {
+    fetch('https://freshdesk-backend.herokuapp.com/get-profile', {
       method: 'POST',
       body: JSON.stringify(loggedUserData),
       headers: {
@@ -33,7 +33,9 @@ const ViewProfile = ({ loggedUser, refactorProfile }) => {
             'https://via.placeholder.com/150/000000?text=Your+Profile+Picture'
           );
         } else {
-          setProfileImage('http://localhost:5000/' + data.image);
+          setProfileImage(
+            'https://freshdesk-backend.herokuapp.com/' + data.image
+          );
         }
       });
   }, [name, refactorProfile, loggedUser]);

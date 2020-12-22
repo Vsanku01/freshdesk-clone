@@ -6,7 +6,7 @@ const AddMember = () => {
 
   const buttonHandler = (e) => {
     e.preventDefault();
-    fetch('http://localhost:5000/add-member', {
+    fetch('https://freshdesk-backend.herokuapp.com/add-member', {
       method: 'POST',
       body: JSON.stringify({ email }),
       headers: {
